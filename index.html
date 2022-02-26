@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Info</title>
+    <style type="text/css">
+        body {
+            background-color: lightblue;
+        }
+    </style>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/main.js"></script>
+</head>
+
+<body>
+    <h1>Assignment 1 Software Engineering</h1>
+    <div>Enter New Tweet Here:</div>
+    <form id="form1" method="POST">
+        <table style="margin-left:auto; margin-right:auto;">
+            <tr>
+                <td><label>Tweet ID</label></td>
+                <td><input class="form-control" type="text" name="userFill" id="userFill" required></td>
+            </tr>
+            <tr>
+                <td><label>Text</label></td>
+                <td><input class="form-control" type="text" name="text" id="text" required></td>
+            </tr>
+        </table>
+        <br />
+        <button type="Submit" id="add" class="btn btn-success">Tweet</button>
+    </form>
+
+    <br />
+    <hr>
+    <br />
+    <div>Search For a Tweet:</div>
+    <form>
+        <table style="margin-left:auto; margin-right:auto;">
+            <tr>
+                <td><label>Tweet Search</label></td>
+                <td><input class="form-control" type="text" name="searchEntry" id="searchEntry" required></td>
+            </tr>
+        </table>
+        <br />
+        <button type="Submit" id="search" class="btn btn-success">Search</button>
+    </form>
+    <br />
+    <table class="table table-bordered" id='searchResult' style="margin-left:auto; margin-right:auto;">
+        <thead>
+            <tr>
+                <th>Create Time</th>
+                <th> Text</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <br />
+    <hr>
+    <br />
+    <div>Enter ID to Delete:</div>
+    <form>
+        <table style="margin-left:auto; margin-right:auto;">
+            <tr>
+                <td><label>Delete ID</label></td>
+                <td><input class="form-control" type="text" name="delEntry" id="delEntry" required></td>
+            </tr>
+        </table>
+        <br />
+        <button type="Submit" id="delete" class="btn btn-success">Delete</button>
+    </form>
+    <br />
+    <hr>
+    <br />
+    <div>Enter to Change Name:</div>
+    <form>
+        <table style="margin-left:auto; margin-right:auto;">
+            <tr>
+                <td><label>Current Name</label></td>
+                <td><input class="form-control" type="text" name="oldName" id="oldName" required></td>
+            </tr>
+            <tr>
+                <td><label>New Name</label></td>
+                <td><input class="form-control" type="text" name="newName" id="newName" required></td>
+            </tr>
+        </table>
+        <br />
+        <button type="Submit" id="change" class="btn btn-success">Update</button>
+    </form>
+    <br />
+    <hr>
+    <br />
+    <button id="tweetBtn" class="btn btn-primary">Tweets</button>
+    <br />
+    <table class="table table-bordered" id='tweetTable' style="margin-left:auto; margin-right:auto;">
+        <thead>
+            <tr>
+                <th>CreateTime</th>
+                <th>text</th>
+                <th>tweetID</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <br />
+    <button id="userBtn" class="btn btn-primary">Users</button>
+    <br />
+    <table class="table table-bordered" id='userID' style="margin-left:auto; margin-right:auto;">
+        <thead>
+            <tr>
+                <th>UserID</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>
