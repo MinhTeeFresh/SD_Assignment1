@@ -14,7 +14,8 @@ app.use(express.static(__dirname));
     getting all tweets
  */
 app.get('/tweets', function (req, res) {
-    fs.readFile(__dirname + "/" + "favs.json", 'utf8', function (err, data) {
+    fs.readFile(__dirname + "/" + "favs.json", 'utf8', 
+    function (err, data) {
         data = JSON.parse(data);
         res.send(data);
     });
@@ -32,7 +33,8 @@ app.get('/tweets', function (req, res) {
 app.get('/tweets/:id', function (req, res) {
     var id = req.params.id;
     var found = false;
-    fs.readFile(__dirname + "/" + "favs.json", 'utf8', function (err, data) {
+    fs.readFile(__dirname + "/" + "favs.json", 'utf8', 
+    function (err, data) {
         newdata = JSON.parse(data);
         newdata.forEach(function (tweet, index) {
             if (!found && Number(tweet.id) === Number(id)) {
@@ -71,7 +73,8 @@ app.post('/tweets', function (req, res) {
 
     newData.push(newTweet);
     res.send("tweet successful")
-    fs.writeFile(__dirname + "/" + "favs.json", JSON.stringify(newData),
+    fs.writeFile(__dirname + "/" + "favs.json", 
+    JSON.stringify(newData),
         (err) => {
             // Error checking
             if (err) throw err;
@@ -91,14 +94,16 @@ app.post('/tweets', function (req, res) {
 app.delete('/tweets/:id', function (req, res) {
     let id = req.params.id;
     var found = false;
-    fs.readFile(__dirname + "/" + "favs.json", 'utf8', function (err, data) {
+    fs.readFile(__dirname + "/" + "favs.json", 'utf8', 
+    function (err, data) {
         newdata = JSON.parse(data);
         newdata.forEach(function (tweet, index) {
             if (!found && Number(tweet.id) === Number(id)) {
                 newdata.splice(index, 1);
             }
         });
-        fs.writeFile(__dirname + "/" + "favs.json", JSON.stringify(newdata),
+        fs.writeFile(__dirname + "/" + "favs.json", 
+        JSON.stringify(newdata),
             (err) => {
                 // Error checking
                 if (err) throw err;
@@ -123,14 +128,16 @@ app.put('/tweets/:id', function (req, res) {
     var newName = req.body.newName;
     var found = false;
 
-    fs.readFile(__dirname + "/" + "favs.json", 'utf8', function (err, data) {
+    fs.readFile(__dirname + "/" + "favs.json", 'utf8', 
+    function (err, data) {
         newdata = JSON.parse(data);
         newdata.forEach(function (tweet, index) {
             if (!found && String(tweet.user.name) === (id)) {
                 tweet.user.screen_name = newName;
             }
         });
-        fs.writeFile(__dirname + "/" + "favs.json", JSON.stringify(newdata),
+        fs.writeFile(__dirname + "/" + "favs.json", 
+        JSON.stringify(newdata),
             (err) => {
                 // Error
                 if (err) throw err;
