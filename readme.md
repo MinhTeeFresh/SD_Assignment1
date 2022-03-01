@@ -24,11 +24,15 @@ Project Completed by Minh Tran
     > ls
     - Utilize ***cd [name of folder]*** to move to desired folder.
     > cd Assignment1
-3. Once inside the project folder run the command
+
+3. Once inside the project folder run the command:
+    > npm install express
+
+4. After the installation is complete, run the command:
     > node app.js
-4. Go to your web browser and type in the following URL:
+5. Go to your web browser and type in the following URL:
     - http://127.0.0.1:3000/
-5. Press enter, the website should open up.
+6. Press enter, the website should open up.
 
 ## Using the Website - 
 ### *Retrieving All Tweets* 
@@ -83,3 +87,11 @@ Project Completed by Minh Tran
 - When finished, press the green **Update** button to confirm your changes.
 
     ![Update Button](/Pictures/updateBtn.png)
+
+## Used References:
+
+Dr. Ji Hwan Park's example_code:
+ + https://canvas.ou.edu/courses/249256/pages/course-materials
+
+Learn Coding Tutorial's AJAX, RESTful API tutorial
+ + https://www.youtube.com/watch?v=G0BzzuXS8gI
